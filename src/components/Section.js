@@ -10,8 +10,12 @@ function Section() {
       </TextContainer>
       <ButtonContainer>
         <ButtonGroup>
-          <LeftButton>Custon Order</LeftButton>
-          <RightButton>Existing Inventory</RightButton>
+          <Button>
+            <LeftButton>Custon Order</LeftButton>
+          </Button>
+          <Button>
+            <RightButton>Existing Inventory</RightButton>
+          </Button>
         </ButtonGroup>
         <DownArrow src="./assets/down-arrow.svg" />
       </ButtonContainer>
@@ -40,8 +44,12 @@ const TextContainer = styled.div`
 
 const ButtonGroup = styled.div`
   display: flex;
-  justify-content: center;
   margin-bottom: 30px;
+  justify-content: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 const LeftButton = styled.button`
@@ -58,7 +66,11 @@ const LeftButton = styled.button`
   margin: 8px;
 `;
 
-const RightButton = styled(LeftButton)``;
+const RightButton = styled(LeftButton)`
+  background-color: white;
+  opacity: 0.65;
+  color: black;
+`;
 
 const DownArrow = styled.img`
   margin-top: 20px;
@@ -69,4 +81,10 @@ const DownArrow = styled.img`
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+`;
+
+const Button = styled.div`
+  display: flex;
+  justify-content: center;
 `;

@@ -6,6 +6,9 @@ function Home() {
   return (
     <MainSection>
       <Section />
+      <Section />
+      <Section />
+      <Section />
     </MainSection>
   );
 }
