@@ -55,6 +55,7 @@ const LeftButton = styled.button`
   opacity: 0.85;
   text-transform: uppercase;
   font-size: 12px;
+  margin: 8px;
 `;
 
 const RightButton = styled(LeftButton)``;
@@ -62,6 +63,10 @@ const RightButton = styled(LeftButton)``;
 const DownArrow = styled.img`
   margin-top: 20px;
   height: 40px;
+  animation: animateDown infinite 1.5s;
 `;
 
-const ButtonContainer = styled.div``;
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
