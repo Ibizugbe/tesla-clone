@@ -8,10 +8,13 @@ function Section() {
         <h1>Model S</h1>
         <p>Order Online for Touchless Delivery</p>
       </TextContainer>
-      <ButtonGroup>
-        <LeftButton>Custon Order</LeftButton>
-        <RightButton>Existing Inventory</RightButton>
-      </ButtonGroup>
+      <ButtonContainer>
+        <ButtonGroup>
+          <LeftButton>Custon Order</LeftButton>
+          <RightButton>Existing Inventory</RightButton>
+        </ButtonGroup>
+        <DownArrow src="./assets/down-arrow.svg" />
+      </ButtonContainer>
     </SectionWrap>
   );
 }
@@ -38,6 +41,7 @@ const TextContainer = styled.div`
 const ButtonGroup = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
 `;
 
 const LeftButton = styled.button`
@@ -54,3 +58,10 @@ const LeftButton = styled.button`
 `;
 
 const RightButton = styled(LeftButton)``;
+
+const DownArrow = styled.img`
+  margin-top: 20px;
+  height: 40px;
+`;
+
+const ButtonContainer = styled.div``;
