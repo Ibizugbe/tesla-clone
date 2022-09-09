@@ -17,5 +17,7 @@ const SectionWrap = styled.section``;
 const Container = styled.div`
   height: 100vh;
   width: 100%;
-  background-color: orange;
+  background-image: url("/assets/model-s.jpg");
+  background-size: cover;
+  background-position: center;
 `;
