@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 function Section(props) {
   const {
@@ -27,6 +28,14 @@ function Section(props) {
 }
 
 export default Section;
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  rightBtnText: PropTypes.string.isRequired,
+  leftBtnText: PropTypes.string.isRequired,
+  backgroundImg: PropTypes.node.isRequired,
+};
 
 const SectionWrap = styled.section`
   height: 100vh;
