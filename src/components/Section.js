@@ -1,9 +1,10 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 function Section(props) {
-  const { title, description, backgroundImg, leftBtnText, rightBtnText } =
-    props;
+  const {
+    title, description, backgroundImg, leftBtnText, rightBtnText,
+  } = props;
   return (
     <SectionWrap bgImage={backgroundImg}>
       <TextContainer>
@@ -37,6 +38,7 @@ const SectionWrap = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-bottom: 20px;
 `;
 
 const TextContainer = styled.div`
@@ -46,7 +48,6 @@ const TextContainer = styled.div`
 
 const ButtonGroup = styled.div`
   display: flex;
-  margin-bottom: 30px;
   justify-content: center;
   @media (max-width: 768px) {
     flex-direction: column;
