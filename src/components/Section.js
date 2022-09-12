@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import Fade from 'react-reveal/Fade';
 
 function Section(props) {
   const {
@@ -9,18 +10,22 @@ function Section(props) {
   return (
     <SectionWrap bgImage={backgroundImg}>
       <TextContainer>
-        <h1>{title}</h1>
-        <p>{description}</p>
+        <Fade bottom>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </Fade>
       </TextContainer>
       <ButtonContainer>
-        <ButtonGroup>
-          <Button>
-            <LeftButton>{leftBtnText}</LeftButton>
-          </Button>
-          <Button>
-            {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
-          </Button>
-        </ButtonGroup>
+        <Fade bottom big>
+          <ButtonGroup>
+            <Button>
+              <LeftButton>{leftBtnText}</LeftButton>
+            </Button>
+            <Button>
+              {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
+            </Button>
+          </ButtonGroup>
+        </Fade>
         <DownArrow src="./assets/down-arrow.svg" />
       </ButtonContainer>
     </SectionWrap>

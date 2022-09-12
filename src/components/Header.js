@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 function Header() {
   return (
@@ -46,6 +46,20 @@ function Header() {
               </Menu>
             </Help>
           </li>
+          <MenuNav>
+            <li>Existing Inventory</li>
+            <li>Used Inventory</li>
+            <li>Trade-In</li>
+            <li>Test Drive</li>
+            <li>Cybertruck</li>
+            <li>Roadster</li>
+            <li>Semi</li>
+            <li>Charging</li>
+            <li>Powerwall</li>
+            <li>Commercial Energy</li>
+            <li>Utilities</li>
+            <li>Find Us</li>
+          </MenuNav>
         </NavContent>
       </NavContainer>
     </header>
@@ -103,4 +117,18 @@ const Menu = styled.li`
     font-weight: bold;
     cursor: pointer;
   }
+`;
+
+const MenuNav = styled.ul`
+  position: fixed;
+  background-color: white;
+  top: 0;
+  right: 0;
+  bottom: o;
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 80px 50px;
 `;
